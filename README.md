@@ -122,7 +122,7 @@ The `src/config.py` file allows you to configure:
 - **HuggingFace token** (`AUTH_TOKEN_HF`) for private models
 - **Dataset paths** `DATA_DIR`
 
-This configuration comes from variables placed in requirements.txt
+This configuration comes from variables placed in .env
 
 Adjust the paths to match the local location of your data before running.
 
