@@ -4,11 +4,17 @@ Automatic detection of Alzheimer's disease from Spanish speech recordings using 
 
 ---
 
+## ℹ️ Data 
+
+For this project, IAEAV Dataset has been used. The description of the dataset can be found here:
+
+https://rua.ua.es/entities/publication/095803d3-b25e-4888-a36f-faf764a670eb
+
 ## 📋 Description
 
-This project implements an end-to-end pipeline to distinguish between Alzheimer's patients and healthy controls from audio recordings in which participants perform structured cognitive tasks (T2–T7). The system combines:
+This project implements an end-to-end pipeline to distinguish between Alzheimer's patients and healthy controls from audio recordings in which participants perform structured cognitive tasks. The system combines:
 
-- **Automatic transcription** with Whisper `large-v3-turbo`
+- **Automatic transcription** with Whisper `large-v3`
 - **Cognitive feature extraction** from transcriptions (tasks T2–T7)
 - **Semantic embeddings** with BERT and Wav2Vec2
 - **Audio features** (log-Mel spectrograms, acoustic features)
@@ -82,6 +88,10 @@ Audio (.wav)
 
 ## ⚙️ Installation
 
+```
+pip install requirements.txt
+```
+
 ## 🧩 Models
 
 ### Machine Learning
@@ -110,18 +120,12 @@ Audio (.wav)
 The `src/config.py` file allows you to configure:
 
 - **HuggingFace token** (`AUTH_TOKEN_HF`) for private models
-- **Dataset paths** (`DATA_DIR`, `DATA_EXTRACTED_DIR`)
+- **Dataset paths** `DATA_DIR`
+
+This configuration comes from variables placed in requirements.txt
 
 Adjust the paths to match the local location of your data before running.
 
 ---
 
-## 📄 License
 
-This project does not currently have a defined license. By default, all rights are reserved by the author.
-
----
-
-## 👤 Author
-
-**senenmand** — [GitHub](https://github.com/senenmand)
